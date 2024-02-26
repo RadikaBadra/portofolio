@@ -6,9 +6,10 @@
   --primary: #000000;
   --accent: #0B0D7B;
   --text-accent: #908F8F;
+  --ternary: #111111;
 }
 
 .container {
-  margin: auto;
+  margin: 0 auto;
   width: 1080px;
 }

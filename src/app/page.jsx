@@ -22,23 +22,23 @@ export default function Home() {
   ];
 
   return (
-    <main className="flex flex-col gap-32">
+    <main className="flex flex-col gap-32 mt-[120px]">
       <section className="Hero">
         <div
-          className="absolute bg-no-repeat h-full m-auto  top-0 w-full -z-10"
+          className="absolute bg-no-repeat h-full m-auto top-0 w-full -z-10"
           style={{
             backgroundImage: `url('/assets/bg-blue.svg')`,
           }}
         ></div>
         <div className="container text-center">
-          <p className="mb-12px text-[20px]">
-            known as <span className="font-black text">Radika Badra</span>
+          <p className="mb-12px text-[20px] text-white">
+            known as <span className="font-black text-white">Radika Badra</span>
           </p>
-          <p className="font-black m-auto text-[50px] w-[421px]">
+          <p className="font-black m-auto text-[50px] text-white w-[421px]">
             Junior Developer <span className="font-light">Based in</span>{" "}
             Indonesia
           </p>
-          <p className="font-thin text-[15px]">
+          <p className="font-light text-[15px] text-white">
             Lorem ipsum dolor sit amet consectetur. Tellus dignissim et mi eget.
           </p>
 
@@ -53,7 +53,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="Achievement">
+      <section className="Achievements">
         <div className="container flex justify-between">
           {achievements.map((items, index) => {
             return (
@@ -64,6 +64,12 @@ export default function Home() {
               />
             );
           })}
+        </div>
+      </section>
+
+      <section className="About">
+        <div className="bg-ternary py-[70px] w-full">
+          <div className="container"></div>
         </div>
       </section>
     </main>

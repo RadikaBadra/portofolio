@@ -12,6 +12,7 @@ module.exports = {
         primary: "var(--primary)",
         accent: "var(--accent)",
         text_accent: "var(--text-accent)",
+        ternary: "var(--ternary)",
       },
     },
   },
