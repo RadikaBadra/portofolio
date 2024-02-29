@@ -36,7 +36,7 @@ export const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 w-full z-10
+      className={`fixed top-0 w-full z-20
         ${
           scrollY > 50
             ? "bg-gray-400 backdrop-filter backdrop-blur-sm bg-opacity-30"
@@ -54,7 +54,7 @@ export const Header = () => {
             quality={100}
           />
         </li>
-        <div className="flex gap-7 items-center">
+        <nav className="flex gap-7 items-center">
           {nav_items.map((items, index) => {
             return (
               <Link
@@ -71,7 +71,7 @@ export const Header = () => {
               contact me 🚀
             </button>
           </li>
-        </div>
+        </nav>
       </ul>
     </div>
   );
