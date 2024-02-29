@@ -1,8 +1,12 @@
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
+import { Providers } from "./provider";
 
-const roboto = Roboto({ subsets: ["latin"], weight: "400" });
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+});
 
 export const metadata = {
   title: "RDK dev",
@@ -17,7 +21,7 @@ export default function RootLayout({ children }) {
           <Header />
         </nav>
 
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

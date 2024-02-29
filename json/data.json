@@ -1,0 +1,56 @@
+{
+  "services": [
+    {
+      "image": "web",
+      "title": "Web Development",
+      "desc": "Make a cool website"
+    },
+    {
+      "image": "mobile",
+      "title": "Mobile Development",
+      "desc": "Make a cool mobile apps"
+    },
+    {
+      "image": "ml",
+      "title": "Machine Learning Enthusiast",
+      "desc": "Interset making a ML model"
+    }
+  ],
+
+  "achievements": [
+    {
+      "number": "3",
+      "desc": "Completed Project"
+    },
+    {
+      "number": "3",
+      "desc": "Satisfied Client"
+    },
+    {
+      "number": "3",
+      "desc": "Years Experiences"
+    },
+    {
+      "number": "1",
+      "desc": "Ongoing Project"
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "FIREMATE",
+      "desc": "mobile apps for firefighters",
+      "img": "asset/projects/firemate.png"
+    },
+    {
+      "title": "BENERIN.ID",
+      "desc": "technician booking platform",
+      "img": "asset/projects/benerin.png"
+    },
+    {
+      "title": "NOTED",
+      "desc": "online notes websites",
+      "img": "asset/projects/noted.png"
+    }
+  ]
+}

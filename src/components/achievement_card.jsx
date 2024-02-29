@@ -1,5 +1,4 @@
 export const AchievementCard = (props) => {
-  console.log(props);
   return (
     <div className="flex gap-4 items-center">
       <h1 className="font-black text-[80px] text-text_accent">

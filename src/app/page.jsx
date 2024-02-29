@@ -1,47 +1,16 @@
 import Image from "next/image";
+import { promises as fs } from "fs";
 import AchievementCard from "@/components/achievement_card";
 import ServiceCard from "@/components/service_card";
+import ProjectCard from "@/components/project_card";
+import { SeeMoreButton } from "@/components/see_more_buttons";
 
-export default function Home() {
-  const achievements = [
-    {
-      number: "3",
-      desc: "Completed Project",
-    },
-    {
-      number: "3",
-      desc: "Satisfied Client",
-    },
-    {
-      number: "3",
-      desc: "Years Experiences",
-    },
-    {
-      number: "1",
-      desc: "Ongoing Project",
-    },
-  ];
-
-  const services = [
-    {
-      image: "web",
-      title: "Web Development",
-      desc: "Make a cool website",
-    },
-    {
-      image: "mobile",
-      title: "Mobile Development",
-      desc: "Make a cool mobile apps",
-    },
-    {
-      image: "ml",
-      title: "Machine Learning Enthusiast",
-      desc: "Interset making a ML model",
-    },
-  ];
+export default async function Home() {
+  const file = await fs.readFile(process.cwd() + "/json/data.json", "utf8");
+  const data = JSON.parse(file);
 
   return (
-    <main className="flex flex-col gap-32 mt-[110px]">
+    <main className="flex flex-col gap-[70px] mt-[110px]">
       <section className="Hero">
         <div
           className="absolute bg-no-repeat h-full m-auto top-0 w-full -z-10"
@@ -50,10 +19,10 @@ export default function Home() {
           }}
         ></div>
         <div className="container text-center">
-          <p className="mb-12px text-[20px] text-white">
+          <p className="mb-4 text-[20px] text-white">
             known as <span className="font-black text-white">Radika Badra</span>
           </p>
-          <p className="font-black m-auto text-[50px] text-white w-[421px]">
+          <p className="font-black leading-tight m-auto text-[50px] text-white w-[421px]">
             Junior Developer <span className="font-light">Based in</span>{" "}
             Indonesia
           </p>
@@ -74,7 +43,7 @@ export default function Home() {
 
       <section className="Achievements">
         <div className="container flex justify-between">
-          {achievements.map((items, index) => {
+          {data.achievements.map((items, index) => {
             return (
               <AchievementCard
                 key={index + items.desc}
@@ -106,7 +75,7 @@ export default function Home() {
               </button>
             </div>
             <div className="flex flex-col justify-between items-end right w-6/12">
-              {services.map((items, index) => {
+              {data.services.map((items, index) => {
                 return (
                   <ServiceCard
                     key={index + items.desc}
@@ -117,6 +86,25 @@ export default function Home() {
                 );
               })}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container">
+          <h1 className="font-black mb-12 text-white text-5xl">Recent Works</h1>
+          <div className="flex items-center justify-between">
+            {data.projects.map((items, index) => {
+              return (
+                <ProjectCard
+                  key={index + items.title}
+                  title={items.title}
+                  desc={items.desc}
+                  img={items.image}
+                />
+              );
+            })}
+            <SeeMoreButton />
           </div>
         </div>
       </section>
