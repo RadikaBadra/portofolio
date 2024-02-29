@@ -13,9 +13,17 @@ module.exports = {
           "50%": { transform: "translate(0, 20px)" },
           "100%": { transform: "translate(0, -0px)" },
         },
+        slide: {
+          "0%": { transform: "translateY(100%)", opacity: 0.1 },
+          "15%": { transform: "translateY(0)", opacity: 1 },
+          "30%": { transform: "translateY(0)", opacity: 1 },
+          "45%": { transform: "translateY(-100%)", opacity: 1 },
+          "100%": { transform: "translateY(-100%)", opacity: 0.1 },
+        },
       },
       animation: {
         floating: "floating 4s ease-in-out infinite",
+        slide: "slide 2.5s linear infinite",
       },
       backgroundImage: {},
       colors: {

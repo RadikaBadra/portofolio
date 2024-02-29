@@ -5,7 +5,7 @@ export const TechstackCard = (props) => {
     <div>
       <div className="bg-white h-44 p-9 rounded w-44">
         <Image
-          src={`${props.img}`}
+          src={props.img}
           alt="techstak logo"
           width={100}
           height={100}
