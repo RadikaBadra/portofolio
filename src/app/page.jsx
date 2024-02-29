@@ -4,23 +4,25 @@ import AchievementCard from "@/components/achievement_card";
 import ServiceCard from "@/components/service_card";
 import ProjectCard from "@/components/project_card";
 import { SeeMoreButton } from "@/components/see_more_buttons";
+import { Slider } from "@/components/slider";
 
 export default async function Home() {
   const file = await fs.readFile(process.cwd() + "/json/data.json", "utf8");
   const data = JSON.parse(file);
 
   return (
-    <main className="flex flex-col gap-[70px] mt-[110px]">
+    <main className="flex flex-col gap-[140px] mt-[110px]">
       <section className="Hero">
         <div
-          className="absolute bg-no-repeat h-full m-auto top-0 w-full -z-10"
+          className="absolute bg-contain bg-no-repeat h-full m-auto top-0 w-full -z-10"
           style={{
             backgroundImage: `url('/assets/bg-blue.svg')`,
           }}
         ></div>
         <div className="container text-center">
           <p className="mb-4 text-[20px] text-white">
-            known as <span className="font-black text-white">Radika Badra</span>
+            known as
+            <span className="font-black text-white"> Radika Badra </span>
           </p>
           <p className="font-black leading-tight m-auto text-[50px] text-white w-[421px]">
             Junior Developer <span className="font-light">Based in</span>{" "}
@@ -70,8 +72,8 @@ export default async function Home() {
                   enhances my adaptability and problem-solving skills.
                 </p>
               </div>
-              <button className="bg-accent font-semibold rounded-[4px] py-4 text-[18px] text-white w-5/12">
-                Get In Touch
+              <button className="bg-accent font-semibold rounded py-4 text-lg text-white w-5/12">
+                contact me 🚀
               </button>
             </div>
             <div className="flex flex-col justify-between items-end right w-6/12">
@@ -79,7 +81,7 @@ export default async function Home() {
                 return (
                   <ServiceCard
                     key={index + items.desc}
-                    image={items.desc}
+                    emote={items.emote}
                     title={items.title}
                     desc={items.desc}
                   />
@@ -90,7 +92,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section>
+      <section className="projects">
         <div className="container">
           <h1 className="font-black mb-12 text-white text-5xl">Recent Works</h1>
           <div className="flex items-center justify-between">
@@ -106,6 +108,13 @@ export default async function Home() {
             })}
             <SeeMoreButton />
           </div>
+        </div>
+      </section>
+
+      <section className="techstacks">
+        <div className="container">
+          <h1 className="font-black mb-12 text-white text-5xl">Techstacks</h1>
+          <Slider />
         </div>
       </section>
     </main>

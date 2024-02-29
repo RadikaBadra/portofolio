@@ -1,18 +1,8 @@
 "use client";
 import Image from "next/image";
-import { useParallax } from "react-scroll-parallax";
 export const ProjectCard = (props) => {
-  const parallax =
-    useParallax <
-    HTMLDivElement >
-    {
-      rotate: [0, 360],
-    };
   return (
-    <div
-      ref={parallax.ref}
-      className="bg-white/35 border border-white/45 p-3 rounded"
-    >
+    <div className="bg-white/35 border border-white/45 p-3 rounded">
       <div className="bg-gray-900 h-40 rounded w-60"></div>
       <div className="card-text mt-5">
         <h1 className="font-bold text-white text-xl">{props.title}</h1>

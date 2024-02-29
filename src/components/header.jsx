@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState, useCallback } from "react";
 
-export default function Header() {
+export const Header = () => {
   const nav_items = [
     {
       route_name: "Home",
@@ -36,7 +36,7 @@ export default function Header() {
 
   return (
     <div
-      className={`fixed top-0 w-full
+      className={`fixed top-0 w-full z-10
         ${
           scrollY > 50
             ? "bg-gray-400 backdrop-filter backdrop-blur-sm bg-opacity-30"
@@ -68,11 +68,11 @@ export default function Header() {
           })}
           <li>
             <button className="bg-white font-semibold p-[10px_18px] rounded-[4px] text-[18px] text-primary">
-              Get In Touch
+              contact me 🚀
             </button>
           </li>
         </div>
       </ul>
     </div>
   );
-}
+};

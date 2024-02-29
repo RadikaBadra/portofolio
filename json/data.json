@@ -1,17 +1,17 @@
 {
   "services": [
     {
-      "image": "web",
+      "emote": "💻",
       "title": "Web Development",
       "desc": "Make a cool website"
     },
     {
-      "image": "mobile",
+      "emote": "📱",
       "title": "Mobile Development",
       "desc": "Make a cool mobile apps"
     },
     {
-      "image": "ml",
+      "emote": "🧠",
       "title": "Machine Learning Enthusiast",
       "desc": "Interset making a ML model"
     }
