@@ -4,9 +4,10 @@ import { Parallax } from "react-scroll-parallax";
 
 export const SeeMoreButton = () => {
   return (
-    <button className="bg-white flex group h-40 items-center justify-center rounded-full w-40">
+    <button className="bg-white flex group items-center justify-center p-2 lg:p-4 rounded-full">
       <Parallax rotate={[0, 360]}>
         <Image
+          className="h-[90px] lg:h-[140px] w-[90px] lg:w-[140px]"
           src={"/assets/circular-text.svg"}
           alt="circular text"
           width={140}
@@ -16,7 +17,7 @@ export const SeeMoreButton = () => {
       </Parallax>
 
       <Image
-        className="absolute group-hover:translate-x-2"
+        className="absolute group-hover:translate-x-2 h-8 lg:h-[50px] w-8 lg:w-[50px]"
         src={"/assets/blue-arrow.svg"}
         alt="blue arrow"
         width={50}

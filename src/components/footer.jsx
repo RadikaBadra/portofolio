@@ -30,32 +30,37 @@ export const Footer = () => {
       image: "/icons/github.svg",
     },
   ];
+
+  const date = new Date();
+  const year = date.getFullYear();
+
   return (
-    <div className="bg-accent mt-[140px] py-11 w-full h-full">
+    <div className="bg-accent mt-[70px] lg:mt-[140px] py-6 lg:py-11 w-full h-full">
       <div className="container">
-        <div className="flex items-center justify-between py-24">
-          <h1 className="font-bold text-7xl text-white w-3/4">
+        <div className="flex flex-col lg:flex-row gap-12 items-center justify-between py-12 lg:py-24">
+          <h1 className="font-bold text-[37px] text-center lg:text-left lg:text-7xl text-white w-3/4">
             LET’S CREATE
             <span className={sansita_black.className}> SOMETHING </span>
-            <span className={romanesco.className}>COOL</span> TOGETHER 🔥
+            <span className={romanesco.className}>COOL</span> TOGETHER🔥
           </h1>
-          <button className="bg-white font-semibold h-20 py-4 rounded text-lg text-black w-60">
-            <p className="text-2xl">contact me 🚀</p>
+          <button className="bg-white font-semibold px-6 lg:px-18 py-3 lg:py-4 rounded text-black">
+            <p className="text-xl lg:text-2xl">contact me 🚀</p>
           </button>
         </div>
         <div className="flex items-center justify-between">
           <Image
+            className="h-[80px] lg:h-[100px] w-[80px] lg:w-[100px]"
             src={`/logo.svg`}
-            alt="Logo"
+            alt="logo"
             width={125}
             height={125}
             quality={100}
           />
-          <span className="text-white">
-            © 2023 RDK Dev. All rights reserved
+          <span className="lg:block hidden mb-3 text-white text-xs lg:text-base">
+            © {year} RDK Dev. All rights reserved
           </span>
 
-          <div className="flex gap-5 items-center justify-between">
+          <div className="flex gap-2 lg:gap-5 items-center justify-between">
             {nav.map((item, index) => {
               return (
                 <Link
@@ -64,6 +69,7 @@ export const Footer = () => {
                   className="bg-white flex h-12 items-center justify-center rounded-full w-12"
                 >
                   <Image
+                    className="h-[14px] lg:h-[17px] w-[14px] lg:w-[17px]"
                     src={item.image}
                     alt="socmed logo"
                     width={17}
@@ -75,6 +81,9 @@ export const Footer = () => {
             })}
           </div>
         </div>
+        <p className="lg:hidden pt-[30px] text-center text-white text-xs">
+          © 2024 RDK Dev. All rights reserved
+        </p>
       </div>
     </div>
   );

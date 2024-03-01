@@ -2,8 +2,21 @@
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import { TechstackCard } from "./techstack_card";
+import { useState, useEffect } from "react";
+import { useMediaQuery } from "./use_query";
 
 export const Slider = () => {
+  const isMobile = useMediaQuery(500);
+  const [slide, setSlide] = useState();
+
+  useEffect(() => {
+    if (isMobile) {
+      return setSlide(3);
+    } else {
+      return setSlide(5);
+    }
+  }, [isMobile]);
+
   const techstack = [
     {
       title: "Tailwind CSS",
@@ -46,7 +59,7 @@ export const Slider = () => {
     {
       loop: true,
       slides: {
-        perView: 5,
+        perView: slide,
         spacing: 3,
       },
     },
@@ -84,7 +97,6 @@ export const Slider = () => {
 
   return (
     <div ref={sliderRef} className="keen-slider relative">
-      <div className="absolute backdrop-blur-sm h-full w-[80%] bg-black/70 right-0 z-10"></div>
       {techstack.map((items, index) => {
         return (
           <div key={index + items.title} className="keen-slider__slide">

@@ -13,3 +13,35 @@
   margin: 0 auto;
   width: 1080px;
 }
+
+.line:first-child {
+  transform: translate(-50%, -10px);
+}
+
+.line:nth-child(2) {
+  transform: translate(-50%, -50%);
+}
+
+.line:last-child {
+  transform: translate(-50%, 7px);
+}
+
+.close .line:first-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.close .line:last-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close .line:nth-child(2) {
+  width: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding-left: 26px;
+    padding-right: 26px;
+    width: 100%;
+  }
+}

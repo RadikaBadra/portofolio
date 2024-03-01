@@ -10,7 +10,12 @@ module.exports = {
       keyframes: {
         floating: {
           "0%": { transform: "translate(0,  0px)" },
-          "50%": { transform: "translate(0, 20px)" },
+          "50%": { transform: "translate(0, 12px)" },
+          "100%": { transform: "translate(0, -0px)" },
+        },
+        floating_phone: {
+          "0%": { transform: "translate(0,  0px)" },
+          "50%": { transform: "translate(0, 8px)" },
           "100%": { transform: "translate(0, -0px)" },
         },
         slide: {
@@ -24,6 +29,7 @@ module.exports = {
       animation: {
         floating: "floating 4s ease-in-out infinite",
         slide: "slide 2.5s linear infinite",
+        floating_phone: "floating_phone 4s ease-in-out infinite",
       },
       backgroundImage: {},
       colors: {
