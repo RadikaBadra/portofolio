@@ -38,7 +38,7 @@ export default async function Home() {
                 <h1 className="font-bold mb-8 lg:mb-[30px] leading-tight text-3xl text-center lg:text-left lg:text-[42px] text-white">
                   I’ve been developing website since 2021
                 </h1>
-                <p className="font-extralight px-7 lg:px-0 text-[10px] text-center lg:text-left lg:text-[16px] text-white lg:w-10/12">
+                <p className="font-light px-7 lg:px-0 text-[10px] text-center lg:text-left lg:text-[16px] text-text_gray lg:w-10/12">
                   I am a junior developer with proficiency in JavaScript and
                   frameworks. I am passionate about technology, thrive under
                   pressure, and. My ability to quickly grasp new concepts

@@ -21,7 +21,7 @@ export default function CommunityPage() {
   return (
     <div className="container">
       <h1 className="mb-12 text-3xl text-white">Community Experiences</h1>
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-8 w-full lg:flex-row lg:flex-wrap lg:justify-between">
         {communities.map((item, index) => {
           return (
             <ExperienceCard

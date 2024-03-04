@@ -3,10 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --primary: #000000;
+  --primary: #070707;
   --accent: #0B0D7B;
   --text-accent: #908F8F;
-  --ternary: #111111;
+  --ternary: #363636;
+  --text-gray: #C3CAD5;
 }
 
 .container {
@@ -36,6 +37,40 @@
 
 .close .line:nth-child(2) {
   width: 0;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0.0deg)
+  }
+
+  10% {
+    transform: rotate(14.0deg)
+  }
+
+  20% {
+    transform: rotate(-8.0deg)
+  }
+
+  30% {
+    transform: rotate(14.0deg)
+  }
+
+  40% {
+    transform: rotate(-4.0deg)
+  }
+
+  50% {
+    transform: rotate(10.0deg)
+  }
+
+  60% {
+    transform: rotate(0.0deg)
+  }
+
+  100% {
+    transform: rotate(0.0deg)
+  }
 }
 
 @media only screen and (max-width: 600px) {

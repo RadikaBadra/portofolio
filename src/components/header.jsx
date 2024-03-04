@@ -26,7 +26,7 @@ export const Header = () => {
     line.push(
       <div
         key={i}
-        className="absolute bg-white duration-500 h-[3px] left-1/2 line rounded-[6px] top-1/2 transition-multiple w-full"
+        className="absolute bg-white duration-500 h-[2px] left-1/2 line top-1/2 transition-multiple w-full"
       ></div>
     );
   }
@@ -58,10 +58,10 @@ export const Header = () => {
         }
       `}
       >
-        <ul className="container flex items-center justify-between">
+        <ul className="container flex items-center justify-between py-2 lg:py-6">
           <li>
             <Image
-              className="h-[70px] lg:h-[100px] w-[70px] lg:w-[100px]"
+              className="h-[20px] lg:h-[30px] w-auto"
               src={`/logo.svg`}
               alt="Logo"
               width={125}
