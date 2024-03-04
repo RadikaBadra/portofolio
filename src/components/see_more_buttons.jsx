@@ -4,7 +4,7 @@ import { Parallax } from "react-scroll-parallax";
 
 export const SeeMoreButton = () => {
   return (
-    <button className="bg-white flex group items-center justify-center p-2 lg:p-4 rounded-full">
+    <button className="bg-white flex group items-center justify-center p-2 rounded-full">
       <Parallax rotate={[0, 360]}>
         <Image
           className="h-[90px] lg:h-[140px] w-[90px] lg:w-[140px]"

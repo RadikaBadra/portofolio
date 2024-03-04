@@ -35,7 +35,6 @@ export const Header = () => {
 
   const onScroll = useCallback((event) => {
     const { pageYOffset, scrollY } = window;
-    console.log("yOffset", pageYOffset, "scrollY", scrollY);
     setScrollY(window.pageYOffset);
   }, []);
 
@@ -83,9 +82,14 @@ export const Header = () => {
               );
             })}
             <li>
-              <button className="bg-white font-semibold p-[10px_18px] rounded-[4px] text-[18px] text-primary">
+              <Link
+                href={
+                  "https://mail.google.com/mail/u/0/#inbox?compose=CllgCJlFlwcHvfRScsJskmzjQmgWtGsCXPXWRSnttDNNdXPXslVMbWxZQcQVgnMwqLVkQQDKDJB"
+                }
+                className="bg-white font-semibold p-[10px_18px] rounded-[4px] text-[18px] text-primary"
+              >
                 contact me 🚀
-              </button>
+              </Link>
             </li>
           </nav>
           <div
@@ -96,7 +100,7 @@ export const Header = () => {
               isOpen ? "close" : " "
             }`}
           >
-            <div class="h-[30px] m-[5px] relative w-[30px]">{line}</div>
+            <div className="h-[30px] m-[5px] relative w-[30px]">{line}</div>
           </div>
         </ul>
       </div>

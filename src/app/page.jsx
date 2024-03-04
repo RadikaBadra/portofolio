@@ -12,11 +12,11 @@ export default async function Home() {
 
   return (
     <main className="flex flex-col gap-14 lg:gap-[140px] mt-24 lg:mt-[110px]">
-      <section className="Hero">
+      <section id="Hero">
         <Hero />
       </section>
 
-      <section className="Achievements">
+      <section id="Achievements">
         <div className="container flex flex-wrap gap-[16px] justify-center lg:justify-between">
           {data.achievements.map((items, index) => {
             return (
@@ -30,7 +30,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="About">
+      <section id="About">
         <div className="bg-ternary py-12 lg:py-[70px] w-full">
           <div className="container flex flex-col gap-7 lg:gap-0 lg:flex-row">
             <div className="flex flex-col items-center lg:items-start justify-center lg:justify-between left lg:w-6/12">
@@ -65,7 +65,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="projects">
+      <section id="projects">
         <div className="container">
           <h1 className="font-black mb-12 text-center lg:text-left text-white text-3xl lg:text-5xl">
             Recent Works
@@ -88,7 +88,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className="techstacks">
+      <section id="techstacks">
         <div className="container">
           <h1 className="font-black mb-12 text-3xl text-white text-center lg:text-left lg:text-5xl">
             Techstacks

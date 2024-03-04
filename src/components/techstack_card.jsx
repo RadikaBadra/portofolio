@@ -16,7 +16,7 @@ export const TechstackCard = (props) => {
       <h1 className="leading-none lg:mb-2 mt-4 lg:mt-5 text-base lg:text-3xl text-white">
         {props.title}
       </h1>
-      <span className="font-light leading-none text-[8px] text-white">
+      <span className="font-light leading-none text-[8px] lg:text-base text-white">
         {props.desc}
       </span>
     </div>
