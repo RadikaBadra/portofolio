@@ -6,7 +6,7 @@ export default function AboutLayout({ children }) {
   var part = pathName.split("/").pop();
 
   return (
-    <main className="flex flex-col gap-12 mt-24 lg:gap-[100px] lg:mt-[154px]">
+    <main className="flex flex-col gap-12 mt-24 lg:gap-[100px] lg:mt-[120px]">
       <section>
         <div className="container">
           <h1 className="font-bold mb-9 text-white text-3xl lg:text-5xl">

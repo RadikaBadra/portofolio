@@ -10,7 +10,7 @@ export const Hero = () => {
           backgroundImage: `url('/assets/bg-blue.svg')`,
         }}
       ></div>
-      <div className="container">
+      <div className="container" data-aos="zoom-in">
         <p className="mb-6 lg:text-[20px] text-center text-white">
           known as
           <span className="font-black text-white"> Radika Badra</span>

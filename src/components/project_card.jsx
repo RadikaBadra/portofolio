@@ -2,7 +2,10 @@
 import Image from "next/image";
 export const ProjectCard = (props) => {
   return (
-    <div className="bg-white/35 border border-white/45 p-[6px] lg:p-3 rounded">
+    <div
+      className="bg-white/35 border border-white/45 p-[6px] lg:p-3 rounded"
+      data-aos="fade-up"
+    >
       <div className="bg-gray-900 h-20 lg:h-40 rounded w-[120px] lg:w-60"></div>
       <div className="card-text mt-5">
         <h1 className="font-bold leading-none text-white text-sm lg:text-xl">

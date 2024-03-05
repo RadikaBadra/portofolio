@@ -6,7 +6,10 @@ export const ServiceCard = (props) => {
   const isMobile = useMediaQuery(375);
 
   return (
-    <div className="bg-white/35 border border-white/45 px-2 lg:px-3 py-2 lg:py-4 relative w-[85%]">
+    <div
+      className="bg-white/35 border border-white/45 px-2 lg:px-3 py-2 lg:py-4 relative w-[85%]"
+      data-aos="fade-right"
+    >
       <div>
         <h1 className="font-bold text-base lg:text-[22px] text-white">
           {props.title}

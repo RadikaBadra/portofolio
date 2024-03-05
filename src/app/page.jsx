@@ -1,14 +1,76 @@
-import { promises as fs } from "fs";
+"use client";
 import AchievementCard from "@/components/achievement_card";
 import ServiceCard from "@/components/service_card";
 import ProjectCard from "@/components/project_card";
 import { SeeMoreButton } from "@/components/see_more_buttons";
 import { Slider } from "@/components/slider";
 import { Hero } from "@/components/hero";
+import { React, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-export default async function Home() {
-  const file = await fs.readFile(process.cwd() + "/json/data.json", "utf8");
-  const data = JSON.parse(file);
+export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+    });
+  }, []);
+
+  const services = [
+    {
+      emote: "💻",
+      title: "Web Development",
+      desc: "Make a cool website",
+    },
+    {
+      emote: "📱",
+      title: "Mobile Development",
+      desc: "Make a cool mobile apps",
+    },
+    {
+      emote: "🧠",
+      title: "Machine Learning Enthusiast",
+      desc: "Interset making a ML model",
+    },
+  ];
+
+  const achievements = [
+    {
+      number: "3",
+      desc: "Completed Project",
+    },
+    {
+      number: "3",
+      desc: "Satisfied Client",
+    },
+    {
+      number: "3",
+      desc: "Years Experiences",
+    },
+    {
+      number: "1",
+      desc: "Ongoing Project",
+    },
+  ];
+
+  const projects = [
+    {
+      title: "FIREMATE",
+      desc: "mobile apps for firefighters",
+      img: "asset/projects/firemate.png",
+    },
+    {
+      title: "BENERIN.ID",
+      desc: "technician booking platform",
+      img: "asset/projects/benerin.png",
+    },
+    {
+      title: "NOTED",
+      desc: "online notes websites",
+      img: "asset/projects/noted.png",
+    },
+  ];
 
   return (
     <main className="flex flex-col gap-14 lg:gap-[140px] mt-24 lg:mt-[110px]">
@@ -18,7 +80,7 @@ export default async function Home() {
 
       <section id="Achievements">
         <div className="container flex flex-wrap gap-[16px] justify-center lg:justify-between">
-          {data.achievements.map((items, index) => {
+          {achievements.map((items, index) => {
             return (
               <AchievementCard
                 key={index + items.desc}
@@ -50,7 +112,7 @@ export default async function Home() {
               </button>
             </div>
             <div className="flex flex-col gap-6 items-center lg:items-end justify-between right w-full lg:w-6/12">
-              {data.services.map((items, index) => {
+              {services.map((items, index) => {
                 return (
                   <ServiceCard
                     key={index + items.desc}
@@ -71,7 +133,7 @@ export default async function Home() {
             Recent Works
           </h1>
           <div className="flex flex-wrap gap-4 lg:gap-0 items-center justify-center lg:justify-between m-auto w-[95%] lg:w-full">
-            {data.projects.map((items, index) => {
+            {projects.map((items, index) => {
               return (
                 <ProjectCard
                   key={index + items.title}
