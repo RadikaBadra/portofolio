@@ -8,13 +8,13 @@ export const ProjectCard = (props) => {
       data-aos="fade-up"
     >
       <div
-        className="bg-gray-900 bg-contain h-20 lg:h-40 rounded w-[120px] lg:w-60"
+        className="bg-gray-900 bg-contain h-20 lg:h-40 rounded w-full"
         // style={{
         //   backgroundImage: `url(${props.img})`,
         // }}
       >
         <Image
-          className="duration-500 grayscale h-full transition-all w-full group-hover:grayscale-0"
+          className="duration-500 grayscale object-cover h-full transition-all w-full group-hover:grayscale-0"
           src={`/${props.img}`}
           width={100}
           height={100}

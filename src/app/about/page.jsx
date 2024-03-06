@@ -12,22 +12,24 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="container">
-      <h1 className="mb-12 text-3xl text-white">Working Experiences</h1>
-      <div className="flex flex-col gap-8 w-full lg:flex-row lg:flex-wrap lg:justify-between">
-        {works.map((item, index) => {
-          return (
-            <ExperienceCard
-              key={index + item.title}
-              title={item.title}
-              date={item.date}
-              desc={item.desc}
-              emote={item.emote}
-              position={item.position}
-            />
-          );
-        })}
+    <section>
+      <div className="container">
+        <h1 className="mb-12 text-3xl text-white">Working Experiences</h1>
+        <div className="flex flex-col gap-8 w-full lg:flex-row lg:flex-wrap lg:justify-between">
+          {works.map((item, index) => {
+            return (
+              <ExperienceCard
+                key={index + item.title}
+                title={item.title}
+                date={item.date}
+                desc={item.desc}
+                emote={item.emote}
+                position={item.position}
+              />
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
