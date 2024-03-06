@@ -8,6 +8,7 @@ import { Hero } from "@/components/hero";
 import { React, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Link from "next/link";
 
 export default function Home() {
   useEffect(() => {
@@ -57,18 +58,21 @@ export default function Home() {
   const projects = [
     {
       title: "FIREMATE",
-      desc: "mobile apps for firefighters",
-      img: "asset/projects/firemate.png",
+      desc: "mobile app for firefighters",
+      img: "assets/firemate.svg",
+      link: "https://drive.google.com/uc?export=download&id=1qpnbtc3hLg2vqrWvP8CI4kql3UqnQI28",
     },
     {
       title: "BENERIN.ID",
       desc: "technician booking platform",
-      img: "asset/projects/benerin.png",
+      img: "assets/benerinid.svg",
+      link: "https://benerin.id/",
     },
     {
-      title: "NOTED",
-      desc: "online notes websites",
-      img: "asset/projects/noted.png",
+      title: "NOTHEHING",
+      desc: "online notes website",
+      img: "assets/notehing.svg",
+      link: "https://github.com/RadikaBadra/notehing_app",
     },
   ];
 
@@ -107,9 +111,16 @@ export default function Home() {
                   enhances my adaptability and problem-solving skills.
                 </p>
               </div>
-              <button className="bg-accent font-semibold mt-14 rounded py-4 text-lg text-white w-5/12">
-                contact me 🚀
-              </button>
+              <Link
+                href={
+                  "https://drive.google.com/uc?export=download&id=1vykSKBFdYOVJSGJabhynA1KKASXRrMdx"
+                }
+                className="before:ease group relative bg-accent font-semibold mt-14 overflow-hidden rounded py-4 text-center text-lg text-white w-5/12 before:absolute before:left-0 before:-ml-2 before:h-60 before:w-60 before: before:origin-top-right before:-translate-x-full before:translate-y-12 before:-rotate-90 before:bg-white before:transition-all before:duration-200 hover:before:-rotate-180"
+              >
+                <span className="relative duration-200 transition-all z-10 group-hover:text-black">
+                  Download CV
+                </span>
+              </Link>
             </div>
             <div className="flex flex-col gap-6 items-center lg:items-end justify-between right w-full lg:w-6/12">
               {services.map((items, index) => {
@@ -139,7 +150,8 @@ export default function Home() {
                   key={index + items.title}
                   title={items.title}
                   desc={items.desc}
-                  img={items.image}
+                  img={items.img}
+                  link={items.link}
                 />
               );
             })}

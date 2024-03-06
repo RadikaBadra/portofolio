@@ -1,6 +1,9 @@
 export default function ExperienceCard(props) {
   return (
-    <div className="bg-white/35 border border-white/45 px-2 lg:px-3 py-2 lg:py-4 relative w-full lg:w-[48%]">
+    <div
+      className="bg-white/35 border border-white/45 px-2 lg:px-3 py-2 lg:py-4 relative w-full lg:w-[48%]"
+      data-aos="zoom-in"
+    >
       <div className="absolute bg-white -bottom-3 rounded-full flex items-center justify-center h-14 -right-3 w-14">
         <h1 className="font-bold text-white text-xl">{props.emote}</h1>
       </div>

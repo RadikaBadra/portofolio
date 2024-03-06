@@ -17,7 +17,7 @@ export const SeeMoreButton = () => {
       </Parallax>
 
       <Image
-        className="absolute group-hover:translate-x-2 h-8 lg:h-[50px] w-8 lg:w-[50px]"
+        className="absolute duration-200 group-hover:translate-x-2 h-8 lg:h-[50px] transition-all w-8 lg:w-[50px]"
         src={"/assets/blue-arrow.svg"}
         alt="blue arrow"
         width={50}

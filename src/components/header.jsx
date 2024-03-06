@@ -1,20 +1,24 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState, useCallback } from "react";
 
 export const Header = () => {
+  const pathName = usePathname();
+  var part = pathName.split("/").pop();
+
   const nav_items = [
     {
-      route_name: "Home",
+      route_name: "home",
       link: "/",
     },
     {
-      route_name: "About",
+      route_name: "about",
       link: "/about",
     },
     {
-      route_name: "Works",
+      route_name: "works",
       link: "/works",
     },
   ];
@@ -58,10 +62,10 @@ export const Header = () => {
         }
       `}
       >
-        <ul className="container flex items-center justify-between py-2 lg:py-6">
+        <ul className="container flex items-center justify-between py-2 md:py-6">
           <li>
             <Image
-              className="h-[20px] lg:h-[30px] w-auto"
+              className="h-[20px] md:h-[30px] w-auto"
               src={`/logo.svg`}
               alt="Logo"
               width={125}
@@ -69,13 +73,18 @@ export const Header = () => {
               quality={100}
             />
           </li>
-          <nav className="lg:flex gap-7 items-center hidden">
+          <nav className="md:flex gap-7 items-center hidden">
             {nav_items.map((items, index) => {
               return (
                 <Link
                   href={items.link}
                   key={items.route_name + index}
-                  className="text-[18px] text-white"
+                  className={`${
+                    pathName.includes(items.route_name) ||
+                    pathName == items.link
+                      ? "font-bold text-white"
+                      : "text-text_gray"
+                  } duration-300 text-[18px] transition-all hover:font-bold hover:text-white`}
                 >
                   {items.route_name}
                 </Link>
@@ -83,12 +92,13 @@ export const Header = () => {
             })}
             <li>
               <Link
-                href={
-                  "https://mail.google.com/mail/u/0/#inbox?compose=CllgCJlFlwcHvfRScsJskmzjQmgWtGsCXPXWRSnttDNNdXPXslVMbWxZQcQVgnMwqLVkQQDKDJB"
-                }
-                className="bg-white font-semibold p-[10px_18px] rounded-[4px] text-[18px] text-primary"
+                href={"/contact"}
+                className="bg-white font-semibold group p-[10px_18px] rounded-[4px] text-[18px] text-primary"
               >
-                contact me 🚀
+                contact me{" "}
+                <span className="duration-200 inline-block transition-all group-hover:translate-x-1 group-hover:-translate-y-1">
+                  🚀
+                </span>
               </Link>
             </li>
           </nav>
@@ -124,9 +134,15 @@ export const Header = () => {
               </Link>
             );
           })}
-          <button className="bg-white font-semibold mt-4 p-[6px_14px] lg:p-[10px_18px] rounded-[4px] text-[18px] text-primary">
-            contact me 🚀
-          </button>
+          <Link
+            href={"/contact"}
+            className="bg-white font-semibold group p-[10px_18px] rounded-[4px] text-[18px] text-primary"
+          >
+            contact me{" "}
+            <span className="duration-200 inline-block transition-all group-hover:translate-x-1 group-hover:-translate-y-1">
+              🚀
+            </span>
+          </Link>
         </nav>
       </div>
     </>

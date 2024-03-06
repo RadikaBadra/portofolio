@@ -24,15 +24,15 @@ export const Footer = () => {
 
   const nav = [
     {
-      link: "",
+      link: "https://www.linkedin.com/in/radika-badragitha-422101248/",
       image: "/icons/linked-in.svg",
     },
     {
-      link: "",
+      link: "https://www.instagram.com/prttyyby",
       image: "/icons/instagram.svg",
     },
     {
-      link: "",
+      link: "https://github.com/RadikaBadra",
       image: "/icons/github.svg",
     },
   ];
@@ -60,8 +60,13 @@ export const Footer = () => {
             <span className={sansita_black.className}> SOMETHING </span>
             <span className={romanesco.className}>COOL</span> TOGETHER🔥
           </TypeIt>
-          <button className="bg-white font-semibold px-6 lg:px-18 py-3 lg:py-4 rounded text-black">
-            <p className="text-xl lg:text-2xl">contact me 🚀</p>
+          <button className="bg-white font-semibold group px-6 lg:px-18 py-3 lg:py-4 rounded text-black">
+            <p className="text-xl lg:text-2xl">
+              contact me{" "}
+              <span className="duration-200 inline-block transition-all group-hover:translate-x-1 group-hover:-translate-y-1">
+                🚀
+              </span>
+            </p>
           </button>
         </div>
         <div className="flex items-center justify-between">
@@ -81,8 +86,9 @@ export const Footer = () => {
             {nav.map((item, index) => {
               return (
                 <Link
+                  target="_blank"
                   key={index}
-                  href={""}
+                  href={`${item.link}`}
                   className="bg-white flex h-12 items-center justify-center rounded-full w-12"
                 >
                   <Image

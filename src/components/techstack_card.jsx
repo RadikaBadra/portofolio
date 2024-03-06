@@ -3,11 +3,11 @@ import Image from "next/image";
 export const TechstackCard = (props) => {
   return (
     <div>
-      <div className="bg-white flex h-24 items-center justify-center lg:h-44 lg:p-9 rounded w-24 lg:w-44">
+      <div className="bg-white duration-200 flex h-24 items-center justify-center lg:h-44 lg:p-9 transition-all rounded w-24 lg:w-44 hover:scale-90">
         <Image
           className="h-[60px] lg:h-[100px] w-[60px] lg:w-[100px]"
           src={props.img}
-          alt="techstak logo"
+          alt="techstaks logo"
           width={100}
           height={100}
           quality={100}
