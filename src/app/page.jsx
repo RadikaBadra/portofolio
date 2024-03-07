@@ -104,7 +104,7 @@ export default function Home() {
                 <h1 className="font-bold mb-8 lg:mb-[30px] leading-tight text-3xl text-center lg:text-left lg:text-[42px] text-white">
                   I’ve been developing website since 2021
                 </h1>
-                <p className="font-light px-7 lg:px-0 text-[10px] text-center lg:text-left lg:text-[16px] text-text_gray lg:w-10/12">
+                <p className="font-light px-7 lg:px-0 text-[14px] text-center lg:text-left lg:text-[16px] text-text_gray lg:w-10/12">
                   I am a junior developer with proficiency in JavaScript and
                   frameworks. I am passionate about technology, thrive under
                   pressure, and. My ability to quickly grasp new concepts
@@ -115,9 +115,9 @@ export default function Home() {
                 href={
                   "https://drive.google.com/uc?export=download&id=1vykSKBFdYOVJSGJabhynA1KKASXRrMdx"
                 }
-                className="before:ease group relative bg-accent mt-14 overflow-hidden rounded py-4 text-center text-lg text-white w-5/12 before:absolute before:left-0 before:-ml-2 before:h-60 before:w-60 before: before:origin-top-right before:-translate-x-full before:translate-y-12 before:-rotate-90 before:bg-white before:transition-all before:duration-200 hover:before:-rotate-180"
+                className="before:ease group relative bg-accent mt-14 overflow-hidden rounded p-2 lg:py-4 text-center text-white w-5/12 before:absolute before:left-0 before:-ml-2 before:h-60 before:w-60 before: before:origin-top-right before:-translate-x-full before:translate-y-12 before:-rotate-90 before:bg-white before:transition-all before:duration-200 hover:before:-rotate-180"
               >
-                <span className="relative duration-200 font-semibold text-base md:text-lg transition-all z-10 group-hover:text-black">
+                <span className="relative duration-200 font-semibold text-sm md:text-base transition-all z-10 group-hover:text-black">
                   Download CV
                 </span>
               </Link>
