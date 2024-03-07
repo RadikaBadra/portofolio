@@ -39,7 +39,7 @@ export const ContactForm = () => {
       {success === true ? (
         <Notification
           color={"bg-green-200"}
-          position="bottom-4 right-8 md:bottom-8 md:right-12"
+          position="bottom-4 right-8 md:bottom-4 md:right-12"
         >
           <p className="text-base md:text-xl">😎 message has been sent</p>
         </Notification>
@@ -49,7 +49,7 @@ export const ContactForm = () => {
       {success === false ? (
         <Notification
           color={"bg-red-200"}
-          position="bottom-4 right-8 md:bottom-8 md:right-12"
+          position="bottom-4 right-8 md:bottom-4 md:right-12"
         >
           <p className="text-base md:text-xl">😭 failed sending message</p>
         </Notification>
