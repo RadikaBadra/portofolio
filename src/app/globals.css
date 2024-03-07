@@ -89,11 +89,8 @@
   }
 }
 
-<<<<<<< HEAD
-@media only screen and (min-width: 300px) {
-=======
-@media only screen and (max-width: 400px) {
->>>>>>> 807aa2d1089a0d1ba22064351c57c91d59eb0a7d
+/* Define breakpoints using media queries */
+@media screen and (max-width: 600px) {
   .container {
     padding-left: 26px;
     padding-right: 26px;
@@ -101,12 +98,7 @@
   }
 }
 
-<<<<<<< HEAD
-@media only screen and (min-width: 700px) {
-=======
-
-@media only screen and (max-width: 1080px) {
->>>>>>> 807aa2d1089a0d1ba22064351c57c91d59eb0a7d
+@media screen and (min-width: 601px) and (max-width: 1024px) {
   .container {
     padding-left: 46px;
     padding-right: 46px;
