@@ -77,7 +77,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="flex flex-col gap-14 lg:gap-[140px] mt-24 lg:mt-[110px]">
+    <main className="flex flex-col gap-14 lg:gap-[140px] mt-24 lg:mt-[110px] scrollbar-hide">
       <section id="Hero">
         <Hero />
       </section>
@@ -115,9 +115,9 @@ export default function Home() {
                 href={
                   "https://drive.google.com/uc?export=download&id=1vykSKBFdYOVJSGJabhynA1KKASXRrMdx"
                 }
-                className="before:ease group relative bg-accent font-semibold mt-14 overflow-hidden rounded py-4 text-center text-lg text-white w-5/12 before:absolute before:left-0 before:-ml-2 before:h-60 before:w-60 before: before:origin-top-right before:-translate-x-full before:translate-y-12 before:-rotate-90 before:bg-white before:transition-all before:duration-200 hover:before:-rotate-180"
+                className="before:ease group relative bg-accent mt-14 overflow-hidden rounded py-4 text-center text-lg text-white w-5/12 before:absolute before:left-0 before:-ml-2 before:h-60 before:w-60 before: before:origin-top-right before:-translate-x-full before:translate-y-12 before:-rotate-90 before:bg-white before:transition-all before:duration-200 hover:before:-rotate-180"
               >
-                <span className="relative duration-200 transition-all z-10 group-hover:text-black">
+                <span className="relative duration-200 font-semibold text-base md:text-lg transition-all z-10 group-hover:text-black">
                   Download CV
                 </span>
               </Link>

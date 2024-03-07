@@ -5,6 +5,7 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  plugins: [require("tailwind-scrollbar-hide")],
   theme: {
     extend: {
       keyframes: {
@@ -25,6 +26,10 @@ module.exports = {
           "45%": { transform: "translateY(-100%)", opacity: 1 },
           "100%": { transform: "translateY(-100%)", opacity: 0.1 },
         },
+        slide_x: {
+          "0%": { transform: "scaleX(0)", opacity: 0.1 },
+          "100%": { transform: "scaleX(1)", opacity: 1 },
+        },
         wave: {
           "0%": { transform: "rotate(0.0deg)" },
           "10%": { transform: "rotate(20deg)" },
@@ -41,6 +46,7 @@ module.exports = {
         slide: "slide 2.5s linear infinite",
         floating_phone: "floating_phone 4s ease-in-out infinite",
         waving_hand: "wave 2s linear infinite",
+        slide_x: "slide_x 0.3s linear",
       },
       backgroundImage: {},
       colors: {

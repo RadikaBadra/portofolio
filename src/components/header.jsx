@@ -10,15 +10,15 @@ export const Header = () => {
 
   const nav_items = [
     {
-      route_name: "home",
+      route_name: "Home",
       link: "/",
     },
     {
-      route_name: "about",
+      route_name: "About",
       link: "/about",
     },
     {
-      route_name: "works",
+      route_name: "Works",
       link: "/works",
     },
   ];

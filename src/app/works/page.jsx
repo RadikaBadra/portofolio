@@ -33,7 +33,7 @@ export default function Works() {
             Projects
           </h1>
           <h1
-            className="mb-3 text-white text-xl lg:text-3xl lg:mb-6"
+            className="font-thin mb-3 text-text_gray text-xl lg:text-3xl lg:mb-6"
             data-aos="fade-up"
           >
             Here is all my works
