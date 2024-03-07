@@ -41,7 +41,7 @@ export default function AboutLayout({ children }) {
         </div>
       </section>
       <section>
-        <div className="container w-full lg:mt-[120px]">
+        <div className="container w-full lg:mt-[80px]">
           <nav className="flex justify-between">
             <Link
               href={`/about`}
