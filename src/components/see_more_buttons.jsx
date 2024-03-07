@@ -1,10 +1,14 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { Parallax } from "react-scroll-parallax";
 
 export const SeeMoreButton = () => {
   return (
-    <button className="bg-white flex group items-center justify-center p-2 rounded-full">
+    <Link
+      href={"/works"}
+      className="bg-white flex group items-center justify-center p-2 rounded-full"
+    >
       <Parallax rotate={[0, 360]}>
         <Image
           className="h-[90px] lg:h-[140px] w-[90px] lg:w-[140px]"
@@ -24,6 +28,6 @@ export const SeeMoreButton = () => {
         height={50}
         quality={100}
       />
-    </button>
+    </Link>
   );
 };
