@@ -15,11 +15,11 @@ export const Header = () => {
     },
     {
       route_name: "About",
-      link: "about",
+      link: "/about",
     },
     {
       route_name: "Works",
-      link: "works",
+      link: "/works",
     },
   ];
 
