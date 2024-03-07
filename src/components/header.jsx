@@ -50,7 +50,7 @@ export const Header = () => {
   }, [onScroll]);
 
   return (
-    <>
+    <header>
       <div
         className={`fixed top-0 w-full z-20
         ${
@@ -145,6 +145,6 @@ export const Header = () => {
           </Link>
         </nav>
       </div>
-    </>
+    </header>
   );
 };

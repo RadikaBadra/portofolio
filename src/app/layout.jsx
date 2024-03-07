@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${roboto.className} bg-primary`}
+        className={`${roboto.className} bg-primary flex flex-col justify-between min-h-screen`}
         suppressHydrationWarning={true}
       >
         <Header />

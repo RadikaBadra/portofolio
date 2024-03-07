@@ -22,7 +22,7 @@ export const SeeMoreButton = () => {
 
       <Image
         className="absolute duration-200 group-hover:translate-x-2 h-8 lg:h-[50px] transition-all w-8 lg:w-[50px]"
-        src={"/assets/blue-arrow.svg"}
+        src={"/icons/blue-arrow.svg"}
         alt="blue arrow"
         width={50}
         height={50}
