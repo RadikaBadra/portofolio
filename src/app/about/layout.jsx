@@ -45,7 +45,7 @@ export default function AboutLayout({ children }) {
           <nav className="flex justify-between">
             <Link
               href={`/about`}
-              className={`text-sm text-white relative lg:w-full ${
+              className={`text-sm text-white relative md:w-full ${
                 part == "about"
                   ? "before:absolute before:bg-accent before:-bottom-3 before:content-[' '] before:h-[2px] before:left-0 before:w-[90%] lg:before:h-[4px] lg:before:w-[100%]"
                   : " text-white/45"
@@ -55,7 +55,7 @@ export default function AboutLayout({ children }) {
             </Link>
             <Link
               href={`/about/study`}
-              className={`text-sm text-white relative lg:w-full ${
+              className={`text-sm text-white relative md:w-full ${
                 part == "study"
                   ? "before:absolute before:bg-accent before:-bottom-3 before:content-[' '] before:h-[2px] before:left-0 before:w-[90%] lg:before:h-[4px] lg:before:w-[100%]"
                   : " text-white/45"
@@ -65,7 +65,7 @@ export default function AboutLayout({ children }) {
             </Link>
             <Link
               href={`/about/community`}
-              className={`text-sm text-white relative lg:w-full ${
+              className={`text-sm text-white relative md:w-full ${
                 part == "community"
                   ? "before:absolute before:bg-accent before:-bottom-3 before:content-[' '] before:h-[2px] before:left-0 before:w-[90%] lg:before:h-[4px] lg:before:w-[100%]"
                   : " text-white/45"

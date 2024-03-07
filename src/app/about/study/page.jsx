@@ -21,7 +21,7 @@ export default function StudyPage() {
   return (
     <div className="container">
       <h1 className="mb-12 text-3xl text-white">Study Experiences</h1>
-      <div className="flex flex-col gap-8 w-full lg:flex-row lg:flex-wrap lg:justify-between">
+      <div className="flex flex-col gap-8 w-full sm:flex-row sm:flex-wrap sm:justify-between">
         {studies.map((item, index) => {
           return (
             <ExperienceCard

@@ -49,18 +49,14 @@ export const Footer = () => {
               part == "contact" ? "hidden" : "flex"
             } flex-col lg:flex-row gap-12 items-center justify-between py-12 lg:py-24`}
           >
-            <TypeIt
-              options={{
-                speed: 100,
-                loop: true,
-              }}
+            <h1
               className="font-bold text-[37px] text-center lg:text-left
             lg:text-7xl text-white w-3/4"
             >
               LET’S CREATE
               <span className={sansita_black.className}> SOMETHING </span>
               <span className={romanesco.className}>COOL</span> TOGETHER🔥
-            </TypeIt>
+            </h1>
             <button className="bg-white font-semibold group px-6 lg:px-18 py-3 lg:py-4 rounded text-black">
               <p className="text-xl lg:text-2xl">
                 contact me{" "}
