@@ -45,7 +45,11 @@ export default function AboutLayout({ children }) {
           <nav className="flex justify-between">
             <Link
               href={`/about`}
+<<<<<<< HEAD
               className={`text-xs text-white relative md:w-full ${
+=======
+              className={`text-sm text-white relative md:w-full ${
+>>>>>>> 807aa2d1089a0d1ba22064351c57c91d59eb0a7d
                 part == "about"
                   ? "before:absolute before:bg-accent before:-bottom-3 before:content-[' '] before:h-[2px] before:left-0 before:w-[90%] lg:before:h-[4px] sm:before:w-[100%]"
                   : " text-white/45"

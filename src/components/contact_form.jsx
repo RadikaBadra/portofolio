@@ -1,16 +1,14 @@
 "use client";
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import Notification from "./notification";
 
 export const ContactForm = () => {
   const form = useRef();
-  const [popUp, setPopUp] = useState(false);
-  const [success, setSuccess] = useState(false);
+  const [success, setSuccess] = useState(" ");
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs;
     emailjs
       .send(
         "service_u9dwq0h",
@@ -26,40 +24,38 @@ export const ContactForm = () => {
       )
       .then(
         () => {
-          setPopUp(true);
           setSuccess(true);
         },
         (error) => {
-          setPopUp(true);
-          setsuccess(false);
+          setSuccess(false);
         }
       );
   };
 
+  console.log(success);
+
   return (
-    <div>
-      <div
-        onClick={() => {
-          setPopUp(false);
-        }}
-        className={`${
-          popUp ? "block" : "hidden"
-        } absolute bg-black/65 flex items-center justify-center h-full left-0 top-0 w-full z-30`}
-      >
-        <div className="bg-white flex flex-col gap-5 items-center justify-center p-8 lg:p-20">
-          <h1 className="text-xl lg:text-2xl">
-            {success ? "success sending message" : "failed sending message"}
-          </h1>
-          <button
-            className="bg-accent px-6 py-3 text-white"
-            onClick={() => {
-              setPopUp(false);
-            }}
-          >
-            close
-          </button>
-        </div>
-      </div>
+    <>
+      {success === true ? (
+        <Notification
+          color={"bg-green-200"}
+          position="bottom-4 right-8 md:bottom-8 md:right-12"
+        >
+          <p className="text-base md:text-xl">😎 message has been sent</p>
+        </Notification>
+      ) : (
+        " "
+      )}
+      {success === false ? (
+        <Notification
+          color={"bg-red-200"}
+          position="bottom-4 right-8 md:bottom-8 md:right-12"
+        >
+          <p className="text-base md:text-xl">😭 failed sending message</p>
+        </Notification>
+      ) : (
+        " "
+      )}
       <form
         ref={form}
         onSubmit={sendEmail}
@@ -69,16 +65,21 @@ export const ContactForm = () => {
         <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 items-center justify-between">
           <div className="flex flex-col gap-3 w-full">
             <label className="text-white">Name</label>
-            <input type="text" name="user_name" className="h-8 pl-2" />
+            <input type="text" name="user_name" className="h-8 pl-2" required />
           </div>
           <div className="flex flex-col gap-3 w-full">
             <label className="text-white">Email</label>
-            <input type="email" name="user_email" className="h-8 pl-2" />
+            <input
+              type="email"
+              name="user_email"
+              className="h-8 pl-2"
+              required
+            />
           </div>
         </div>
         <div className="flex flex-col gap-3">
           <label className="text-white">Message</label>
-          <textarea name="message" rows={10} className="p-2" />
+          <textarea name="message" rows={10} className="p-2" required />
         </div>
         <input
           type="submit"
@@ -86,6 +87,6 @@ export const ContactForm = () => {
           className="bg-accent cursor-pointer duration-200 py-2 text-xl text-white transition-all hover:translate-y-1"
         />
       </form>
-    </div>
+    </>
   );
 };

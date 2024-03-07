@@ -50,7 +50,7 @@ export const Header = () => {
   }, [onScroll]);
 
   return (
-    <>
+    <header>
       <div
         className={`fixed top-0 w-full z-20
         ${
@@ -62,7 +62,7 @@ export const Header = () => {
         }
       `}
       >
-        <ul className="container flex items-center justify-between py-2 md:py-6">
+        <ul className="container flex items-center justify-between py-2 sm:py-6">
           <li>
             <Image
               className="h-[20px] md:h-[30px] w-auto"
@@ -73,7 +73,7 @@ export const Header = () => {
               quality={100}
             />
           </li>
-          <nav className="md:flex gap-7 items-center hidden">
+          <nav className="sm:flex gap-7 items-center hidden">
             {nav_items.map((items, index) => {
               return (
                 <Link
@@ -106,7 +106,7 @@ export const Header = () => {
             onClick={() => {
               setIsOpen(!isOpen);
             }}
-            className={`hamburger-btn cursor-pointer h-[40px] w-[40px] md:hidden ${
+            className={`hamburger-btn cursor-pointer h-[40px] w-[40px] sm:hidden ${
               isOpen ? "close" : " "
             }`}
           >
@@ -145,6 +145,6 @@ export const Header = () => {
           </Link>
         </nav>
       </div>
-    </>
+    </header>
   );
 };

@@ -115,9 +115,13 @@ export default function Home() {
                 href={
                   "https://drive.google.com/uc?export=download&id=1vykSKBFdYOVJSGJabhynA1KKASXRrMdx"
                 }
+<<<<<<< HEAD
                 className="before:ease group relative bg-accent mt-14 overflow-hidden rounded px-8 py-4 text-center text-white before:absolute before:left-0 before:-ml-2 before:h-60 before:w-60 before: before:origin-top-right before:-translate-x-full before:translate-y-12 before:-rotate-90 before:bg-white before:transition-all before:duration-200 hover:before:-rotate-180"
+=======
+                className="before:ease group relative bg-accent mt-14 overflow-hidden rounded px-8 py-4 lg:py-4 text-center text-white before:absolute before:left-0 before:-ml-2 before:h-60 before:w-60 before: before:origin-top-right before:-translate-x-full before:translate-y-12 before:-rotate-90 before:bg-white before:transition-all before:duration-200 hover:before:-rotate-180"
+>>>>>>> 807aa2d1089a0d1ba22064351c57c91d59eb0a7d
               >
-                <span className="relative duration-200 font-semibold text-sm md:text-base transition-all z-10 group-hover:text-black">
+                <span className="relative duration-200 font-semibold text-sm lg:text-base transition-all z-10 group-hover:text-black">
                   Download CV
                 </span>
               </Link>

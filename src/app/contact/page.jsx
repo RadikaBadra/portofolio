@@ -1,4 +1,5 @@
 import { ContactForm } from "@/components/contact_form";
+import Notification from "./../../components/notification";
 
 export default function ConctactPage() {
   return (
