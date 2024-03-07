@@ -32,7 +32,7 @@ export default function Home() {
     {
       emote: "🧠",
       title: "Machine Learning Enthusiast",
-      desc: "Interset making a ML model",
+      desc: "Interest making a ML model",
     },
   ];
 

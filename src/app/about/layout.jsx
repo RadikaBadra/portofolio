@@ -36,7 +36,7 @@ export default function AboutLayout({ children }) {
             passion for technology. I perform well under pressure, using my
             quick learning ability to adapt and solve problems effectively. I
             prioritize efficient solutions, making me a valuable addition to any
-            team
+            team.
           </p>
         </div>
       </section>
