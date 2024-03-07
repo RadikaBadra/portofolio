@@ -38,7 +38,7 @@ export default function Works() {
           >
             Here is all my works
           </h1>
-          <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 m-auto w-[95%] lg:w-full">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-4 m-auto w-[95%] lg:w-full">
             {projects.map((items, index) => {
               return (
                 <ProjectCard

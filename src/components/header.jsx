@@ -15,11 +15,11 @@ export const Header = () => {
     },
     {
       route_name: "About",
-      link: "/about",
+      link: "about",
     },
     {
       route_name: "Works",
-      link: "/works",
+      link: "works",
     },
   ];
 
@@ -80,7 +80,7 @@ export const Header = () => {
                   href={items.link}
                   key={items.route_name + index}
                   className={`${
-                    pathName.includes(items.route_name) ||
+                    pathName.includes(items.route_name.toLowerCase()) ||
                     pathName == items.link
                       ? "font-bold text-white"
                       : "text-text_gray"

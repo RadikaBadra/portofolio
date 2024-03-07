@@ -6,7 +6,7 @@ export default function AboutLayout({ children }) {
   var part = pathName.split("/").pop();
 
   return (
-    <main className="flex flex-col gap-12 mt-24 lg:gap-[100px] lg:mt-[120px]">
+    <main className="flex flex-col gap-12 mt-24 lg:mt-[120px]">
       <section>
         <div className="container">
           <h1 className="font-bold mb-9 text-white text-3xl lg:text-5xl">
@@ -45,31 +45,31 @@ export default function AboutLayout({ children }) {
           <nav className="flex justify-between">
             <Link
               href={`/about`}
-              className={`text-sm text-white relative lg:w-full ${
+              className={`text-xs text-white relative md:w-full ${
                 part == "about"
-                  ? "before:absolute before:bg-accent before:-bottom-3 before:content-[' '] before:h-[2px] before:left-0 before:w-[90%] lg:before:h-[4px] lg:before:w-[100%]"
+                  ? "before:absolute before:bg-accent before:-bottom-3 before:content-[' '] before:h-[2px] before:left-0 before:w-[90%] lg:before:h-[4px] sm:before:w-[100%]"
                   : " text-white/45"
-              } lg:text-center  lg:text-xl`}
+              } sm:text-center  lg:text-xl`}
             >
               working experiences
             </Link>
             <Link
               href={`/about/study`}
-              className={`text-sm text-white relative lg:w-full ${
+              className={`text-sm text-white relative md:w-full ${
                 part == "study"
-                  ? "before:absolute before:bg-accent before:-bottom-3 before:content-[' '] before:h-[2px] before:left-0 before:w-[90%] lg:before:h-[4px] lg:before:w-[100%]"
+                  ? "before:absolute before:bg-accent before:-bottom-3 before:content-[' '] before:h-[2px] before:left-0 before:w-[90%] lg:before:h-[4px] sm:before:w-[100%]"
                   : " text-white/45"
-              } lg:text-center  lg:text-xl`}
+              } sm:text-center  lg:text-xl`}
             >
               study experiences
             </Link>
             <Link
               href={`/about/community`}
-              className={`text-sm text-white relative lg:w-full ${
+              className={`text-sm text-white relative md:w-full ${
                 part == "community"
-                  ? "before:absolute before:bg-accent before:-bottom-3 before:content-[' '] before:h-[2px] before:left-0 before:w-[90%] lg:before:h-[4px] lg:before:w-[100%]"
+                  ? "before:absolute before:bg-accent before:-bottom-3 before:content-[' '] before:h-[2px] before:left-0 before:w-[90%] lg:before:h-[4px] sm:before:w-[100%]"
                   : " text-white/45"
-              } lg:text-center lg:text-xl`}
+              } sm:text-center lg:text-xl`}
             >
               community experiences
             </Link>
