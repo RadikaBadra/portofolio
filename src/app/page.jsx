@@ -77,7 +77,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="flex flex-col gap-14 lg:gap-[140px] mt-24 lg:mt-[110px] scrollbar-hide">
+    <main className="flex flex-col gap-14 lg:gap-[140px] mt-24 lg:mt-[110px]">
       <section id="Hero">
         <Hero />
       </section>
@@ -111,7 +111,7 @@ export default function Home() {
                   enhances my adaptability and problem-solving skills.
                 </p>
               </div>
-              <Link
+              <a
                 href={
                   "https://drive.google.com/uc?export=download&id=1vykSKBFdYOVJSGJabhynA1KKASXRrMdx"
                 }
@@ -120,7 +120,7 @@ export default function Home() {
                 <span className="relative duration-200 font-semibold text-sm lg:text-base transition-all z-10 group-hover:text-black">
                   Download CV
                 </span>
-              </Link>
+              </a>
             </div>
             <div className="flex flex-col gap-6 items-center lg:items-end justify-between right w-full lg:w-6/12">
               {services.map((items, index) => {

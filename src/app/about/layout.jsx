@@ -6,10 +6,10 @@ export default function AboutLayout({ children }) {
   var part = pathName.split("/").pop();
 
   return (
-    <main className="flex flex-col gap-12 mt-24 lg:mt-[120px]">
+    <main>
       <section>
         <div className="container">
-          <h1 className="font-bold mb-9 text-white text-3xl lg:text-5xl">
+          <h1 className="font-bold mb-9 mt-24 lg:mt-[120px] text-white text-3xl lg:text-5xl">
             About Me
           </h1>
           <h1 className="mb-2 text-white text-xl lg:text-3xl lg:mb-6">
@@ -41,8 +41,8 @@ export default function AboutLayout({ children }) {
         </div>
       </section>
       <section>
-        <div className="container w-full lg:mt-[80px]">
-          <nav className="flex justify-between">
+        <div className="container w-full">
+          <nav className="flex justify-between mt-9 lg:mt-[80px]">
             <Link
               href={`/about`}
               className={`text-xs text-white relative md:w-full ${
@@ -76,7 +76,7 @@ export default function AboutLayout({ children }) {
           </nav>
         </div>
       </section>
-      {children}
+      <div className="mt-10 lg:mt-16">{children}</div>
     </main>
   );
 }
